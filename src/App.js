@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import LoginPage from "./LoginPage";
+import LoginPage from "./pages/LoginPage";
 import MainPanel from "./MainPanel";
 import LineaPanel from "./modules/admin/LineaPanel";
 
