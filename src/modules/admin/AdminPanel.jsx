@@ -3,6 +3,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 function AdminPanel() {
+  const navigate = useNavigate();
   const [lineas, setLineas] = useState([]);
   const [nuevaLinea, setNuevaLinea] = useState("");
   const [loading, setLoading] = useState(false);
@@ -74,19 +75,12 @@ function AdminPanel() {
               className="bg-gray-100 px-4 py-3 rounded flex justify-between items-center"
             >
               <span>{linea.nombre}</span>
-              import { useNavigate } from "react-router-dom";
-
-              // al inicio del componente
-              const navigate = useNavigate();
-
-              // y dentro del .map:
               <button
                 className="text-sm text-blue-600 hover:underline"
                 onClick={() => navigate(`/linea/${linea._id}`)}
               >
                 Ir al panel principal
               </button>
-              
             </li>
           ))}
         </ul>
@@ -96,3 +90,4 @@ function AdminPanel() {
 }
 
 export default AdminPanel;
+
