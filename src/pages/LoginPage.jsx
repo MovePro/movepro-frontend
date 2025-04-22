@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import HeaderLogo from "../components/HeaderLogo";
+import { useNavigate } from "react-router-dom";
 
-function LoginPage({ onLogin }) {
+function LoginPage() {
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onLogin(password);
+    if (password === "movepro") {
+      navigate("/panel");
+    } else {
+      alert("Contraseña incorrecta");
+    }
   };
 
   return (
@@ -38,4 +44,3 @@ function LoginPage({ onLogin }) {
 }
 
 export default LoginPage;
-
