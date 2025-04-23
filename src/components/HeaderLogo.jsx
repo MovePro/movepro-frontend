@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../assets/Logo_MovePro.png";
+import logo from "../assets/logo_movepro.png";
 
 function HeaderLogo() {
   return (
